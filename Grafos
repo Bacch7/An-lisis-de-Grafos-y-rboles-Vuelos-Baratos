@@ -1,0 +1,14 @@
+/PracticoGrafos
+├── /Data
+│   └── vuelos.csv
+├── /Graphs
+│   ├── Grafo.cs
+│   ├── Arbol.cs
+├── /Models
+│   └── Vuelo.cs
+├── /Services
+│   ├── CentralidadService.cs
+│   ├── VueloService.cs
+├── Program.cs
+├── PracticoGrafos.csproj
+└── README.md
