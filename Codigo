@@ -1,0 +1,27 @@
+public class VueloService
+{
+    public List<Vuelo> CargarVuelos(string rutaArchivo)
+    {
+        var vuelos = new List<Vuelo>();
+        var lineas = File.ReadAllLines(rutaArchivo);
+        foreach (var linea in lineas.Skip(1))
+        {
+            var partes = linea.Split(',');
+            vuelos.Add(new Vuelo
+            {
+                Origen = partes[0],
+                Destino = partes[1],
+                Precio = double.Parse(partes[2])
+            });
+        }
+        return vuelos;
+    }
+
+    public Vuelo BuscarVueloMasBarato(List<Vuelo> vuelos, string origen, string destino)
+    {
+        return vuelos
+            .Where(v => v.Origen == origen && v.Destino == destino)
+            .OrderBy(v => v.Precio)
+            .FirstOrDefault();
+    }
+}
