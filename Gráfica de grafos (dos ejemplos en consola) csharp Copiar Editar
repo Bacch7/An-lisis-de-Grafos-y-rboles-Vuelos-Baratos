@@ -1,0 +1,31 @@
+public class Grafo
+{
+    public Dictionary<string, List<string>> CrearGrafo1()
+    {
+        return new Dictionary<string, List<string>>
+        {
+            {"A", new List<string>{"B", "C"}},
+            {"B", new List<string>{"A", "D"}},
+            {"C", new List<string>{"A", "D"}},
+            {"D", new List<string>{"B", "C"}}
+        };
+    }
+
+    public Dictionary<string, List<string>> CrearGrafo2()
+    {
+        return new Dictionary<string, List<string>>
+        {
+            {"X", new List<string>{"Y", "Z"}},
+            {"Y", new List<string>{"X"}},
+            {"Z", new List<string>{"X"}}
+        };
+    }
+
+    public void MostrarGrafo(Dictionary<string, List<string>> grafo)
+    {
+        foreach (var nodo in grafo)
+        {
+            Console.WriteLine($"{nodo.Key} → {string.Join(", ", nodo.Value)}");
+        }
+    }
+}
