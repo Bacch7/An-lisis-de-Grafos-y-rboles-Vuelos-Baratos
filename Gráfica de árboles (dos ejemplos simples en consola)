@@ -1,0 +1,20 @@
+public class Arbol
+{
+    public void MostrarArbol1()
+    {
+        Console.WriteLine("Árbol 1:");
+        Console.WriteLine("     A");
+        Console.WriteLine("    / \\");
+        Console.WriteLine("   B   C");
+    }
+
+    public void MostrarArbol2()
+    {
+        Console.WriteLine("Árbol 2:");
+        Console.WriteLine("     R");
+        Console.WriteLine("    / \\");
+        Console.WriteLine("   M   N");
+        Console.WriteLine("  /");
+        Console.WriteLine(" P");
+    }
+}
