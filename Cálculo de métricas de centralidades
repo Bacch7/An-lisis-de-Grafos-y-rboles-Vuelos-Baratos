@@ -1,0 +1,11 @@
+public class CentralidadService
+{
+    public void CalcularGrado(Dictionary<string, List<string>> grafo)
+    {
+        Console.WriteLine("Centralidad por Grado:");
+        foreach (var nodo in grafo)
+        {
+            Console.WriteLine($"Nodo {nodo.Key} tiene grado {nodo.Value.Count}");
+        }
+    }
+}
